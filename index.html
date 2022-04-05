@@ -9,12 +9,40 @@
   </head>
   <body>
     <header>
-      <h1>Where in the world?</h1>
-      <div class="toggle-theme"></div>
+      <div class="wrapper">
+        <h1>Where in the world?</h1>
+        <div class="toggle-theme">
+          <span>Dark Mode</span>
+        </div>
+      </div>
     </header>
     <main>
-      <section class="filter-container"></section>
-      <section class="countries-container"></section>
+      <div class="wrapper">
+        <section class="filter-container">
+          <div class="search-box">
+            <button>
+              <img src="./img/search-icon.svg" alt="search-icon" />
+            </button>
+            <input
+              type="text"
+              name="search-ipt"
+              placeholder="Search for a country..."
+              id="search-ipt"
+            />
+          </div>
+          <div class="filter-box">
+            <select name="filter-by-region" id="filter-by-region">
+              <option value="" selected hidden>Filter by Region</option>
+              <option value="">Africa</option>
+              <option value="">America</option>
+              <option value="">Asia</option>
+              <option value="">Europe</option>
+              <option value="">Oceania</option>
+            </select>
+          </div>
+        </section>
+        <section class="countries-container"></section>
+      </div>
     </main>
   </body>
 </html>

@@ -1,11 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap");
 
 :root {
-  --DarkBlue: hsl(209, 23%, 22%);
-  --VeryDarkBlue: hsl(207, 26%, 17%);
-  --VeryDarkBlue: hsl(200, 15%, 8%);
-  --DarkGray: hsl(0, 0%, 52%);
-  --VeryLightGray: hsl(0, 0%, 98%);
+  /* Dark mode */
+  --DarkBlue: #2b3945;
+  --VeryDarkBlue: #202c37;
+  --VeryDarkBlue: #111517;
+
+  /* White mode */
+  --DarkGray: #858585;
+  --VeryLightGray: #fafafa;
+  --White: #fff;
+
+  --BoxShadow: 0px 0px 15px #9f9f9f6a;
 }
 
 * {
@@ -17,4 +23,68 @@
 
 body {
   background-color: var(--VeryLightGray);
+}
+
+.wrapper {
+  margin: auto;
+  max-width: 1000px;
+  padding: 15px 10px;
+}
+
+/* Header container */
+h1 {
+  font-size: 1.5rem;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: var(--BoxShadow);
+}
+
+header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle-theme span {
+  font-weight: 700;
+}
+
+/* Main container */
+
+main .wrapper {
+  margin-top: 30px;
+}
+
+/* Search box */
+
+.search-box {
+  display: flex;
+  background-color: var(--White);
+  max-width: 400px;
+  box-shadow: var(--BoxShadow);
+  border-radius: 5px;
+}
+
+button,
+input[type="text"] {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 15px 20px;
+}
+
+.search-box input[type="text"] {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+button img {
+  width: 80%;
 }
