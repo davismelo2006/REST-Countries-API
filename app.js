@@ -23,13 +23,16 @@ const getAllCountries = () => {
   const url = "https://restcountries.com/v3.1/all";
   fetch(url).then((res) => {
     res.json().then((data) => {
-      createElement(
-        data[0].name.common,
-        data[0].capital[0],
-        data[0].region,
-        data[0].population,
-        data[0].flags.svg
-      );
+      for (const key in data) {
+        const country = data[key];
+        createElement(
+          country.name.common,
+          country.population,
+          country.region,
+          country.capital === undefined ? "" : country.capital[0],
+          country.flags.svg
+        );
+      }
     });
   });
 };

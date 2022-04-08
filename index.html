@@ -12,6 +12,7 @@
       <div class="wrapper">
         <h1>Where in the world?</h1>
         <div class="toggle-theme">
+          <img src="./img/moon.svg" alt="moon-icon" />
           <span>Dark Mode</span>
         </div>
       </div>
@@ -31,18 +32,19 @@
             />
           </div>
           <div class="filter-box">
-            <select name="filter-by-region" id="filter-by-region">
+            <select name="filter-by-region" class="filter-by-region">
               <option value="" selected hidden>Filter by Region</option>
-              <option value="">Africa</option>
-              <option value="">America</option>
-              <option value="">Asia</option>
-              <option value="">Europe</option>
-              <option value="">Oceania</option>
+              <option value="africa">Africa</option>
+              <option value="america">America</option>
+              <option value="asia">Asia</option>
+              <option value="europe">Europe</option>
+              <option value="oceania">Oceania</option>
             </select>
           </div>
         </section>
         <section class="countries-container"></section>
       </div>
     </main>
+    <script src="./app.js"></script>
   </body>
 </html>
