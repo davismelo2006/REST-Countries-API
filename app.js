@@ -1,6 +1,7 @@
 const countries_container = document.querySelector(".countries-container");
 const toggle_theme = document.querySelector(".toggle-theme");
 const body = document.querySelector("body");
+const loading_container = document.querySelector(".loading-container");
 const createElement = (name, population, region, capital, flag) => {
   const el = `
         <div class="country-container">
@@ -24,7 +25,6 @@ const getAllCountries = () => {
   const url = "https://restcountries.com/v3.1/all";
   fetch(url).then((res) => {
     res.json().then((data) => {
-      console.log("Oi");
       for (const key in data) {
         const country = data[key];
         createElement(
@@ -35,7 +35,7 @@ const getAllCountries = () => {
           country.flags.svg
         );
       }
-      console.log("acabou");
+      loading_container.style.display = "none";
     });
   });
 };
