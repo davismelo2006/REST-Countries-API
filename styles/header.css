@@ -1,0 +1,46 @@
+h1 {
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+header {
+  background-color: var(--White);
+  box-shadow: var(--BoxShadow);
+}
+
+body.dark-mode header {
+  background-color: var(--DarkBlue);
+}
+
+header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle-theme {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  gap: 10px;
+  justify-content: end;
+}
+
+.toggle-theme img {
+  max-height: 20px;
+}
+
+body.dark-mode .toggle-theme img {
+  filter: invert(1);
+}
+
+.toggle-theme span {
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.15rem;
+  }
+}
