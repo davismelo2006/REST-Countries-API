@@ -42,15 +42,55 @@ button img {
   width: 80%;
 }
 
-.filter-by-region {
-  cursor: pointer;
-  outline: none;
-  border: none;
-  box-shadow: var(--BoxShadow);
-  height: 100%;
-  padding: 0 15px;
-  border-radius: 5px;
+.drop {
+  position: relative;
+}
+
+.drop .title {
+  display: flex;
+  width: 200px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  user-select: none;
+  padding: 15px;
+}
+
+.drop .title img {
+  width: 12px;
+}
+
+.drop .title,
+.drop .options {
   background-color: var(--White);
+  cursor: pointer;
+  box-shadow: 0 0 5px #1c1c1c39;
+  border-radius: 5px;
+}
+
+body.dark-mode .drop .title,
+body.dark-mode .drop .options {
+  background-color: var(--DarkBlue);
+}
+
+.drop .options {
+  position: absolute;
+  width: 100%;
+  padding: 5px 15px;
+}
+
+.drop .options.hidden {
+  display: none;
+}
+
+.drop .options div {
+  margin: 8px 0;
+  font-size: 0.85rem;
+}
+
+.drop .options div:hover {
+  font-weight: 700;
 }
 
 @media (max-width: 650px) {

@@ -1,11 +1,12 @@
 const countries_container = document.querySelector(".countries-container");
-const toggle_theme = document.querySelector(".toggle-theme");
-const body = document.querySelector("body");
 const loading_container = document.querySelector(".loading-container");
+const url_all_countries = "https://restcountries.com/v3.1/all";
+
 const createElement = (name, population, region, capital, flag) => {
   const el = `
-        <div class="country-container">
-        <div class="country-flag"  style="background-image:url(${flag}); "></div>
+  <div class="country-container">
+        <div class="country-flag"  style="background-image:url(${flag}); ">
+        </div>
         <div class="country-desc">
         <h3> ${name}</h3>
         <p><strong>Population:</strong>
@@ -16,14 +17,14 @@ const createElement = (name, population, region, capital, flag) => {
         <strong>Capital:</strong>
         ${capital}</p>
         </div>
-        </div>
+    <div>
     `;
   countries_container.innerHTML += el;
 };
 
-const getAllCountries = () => {
-  const url = "https://restcountries.com/v3.1/all";
-  fetch(url).then((res) => {
+const getAllCountries = (urlData) => {
+  loading_container.style.display = "flex";
+  fetch(urlData).then((res) => {
     res.json().then((data) => {
       for (const key in data) {
         const country = data[key];
@@ -38,10 +39,7 @@ const getAllCountries = () => {
       loading_container.style.display = "none";
     });
   });
+  return "";
 };
 
-getAllCountries();
-
-toggle_theme.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-});
+getAllCountries(url_all_countries);
