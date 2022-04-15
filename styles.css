@@ -4,14 +4,13 @@
   /* Dark mode */
   --DarkBlue: #2b3945;
   --VeryDarkBlue: #202c37;
-  --VeryDarkBlue: #111517;
 
   /* White mode */
   --DarkGray: #858585;
   --VeryLightGray: #fafafa;
   --White: #fff;
 
-  --BoxShadow: 0px 0px 15px #9f9f9f6a;
+  --BoxShadow: 0px 0px 15px #3b3b3b6a;
 }
 
 * {
@@ -23,6 +22,11 @@
 
 body {
   background-color: var(--VeryLightGray);
+}
+
+body.dark-mode {
+  background-color: var(--VeryDarkBlue);
+  color: #fff;
 }
 
 .wrapper {
@@ -37,8 +41,12 @@ h1 {
 }
 
 header {
-  background-color: #fff;
+  background-color: var(--White);
   box-shadow: var(--BoxShadow);
+}
+
+body.dark-mode header {
+  background-color: var(--DarkBlue);
 }
 
 header .wrapper {
@@ -49,9 +57,10 @@ header .wrapper {
 
 .toggle-theme {
   display: flex;
-  gap: 5px;
   align-items: center;
   cursor: pointer;
+  justify-content: space-between;
+  width: 110px;
 }
 
 .toggle-theme img {
@@ -81,6 +90,10 @@ main .wrapper {
   width: 400px;
   box-shadow: var(--BoxShadow);
   border-radius: 5px;
+}
+
+body.dark-mode .search-box {
+  background-color: var(--DarkBlue);
 }
 
 button,
@@ -119,25 +132,36 @@ button img {
 /* Country container */
 
 .countries-container {
-  display: grid;
+  display: flex;
   gap: 30px;
-  grid-template-columns: auto auto auto auto;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 40px;
 }
 
 .country-container {
   display: grid;
-  max-width: 250px;
-  border-radius: 5px;
+  grid-template-rows: 1fr 1fr;
+  width: 250px;
+  height: 300px;
   cursor: pointer;
 }
 
-.country-container img {
-  border-radius: 5px 5px 0 0;
+body.dark-mode .country-container {
+  background-color: var(--DarkBlue);
+}
+
+.country-flag {
+  height: 100%;
   width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px 5px 0 0;
 }
 
 .country-desc {
-  padding: 0 15px 40px;
+  padding: 8px 15px 40px;
+  border-radius: 0 0 5px 5px;
   box-shadow: 0px 15px 20px #cbcbcb7d;
 }
