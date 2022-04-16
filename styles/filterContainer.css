@@ -26,6 +26,7 @@ input[type="text"] {
 
 .search-box input[type="text"] {
   width: 100%;
+  font-size: 1rem;
 }
 
 body.dark-mode .search-box input[type="text"] {
@@ -52,7 +53,6 @@ button img {
   align-items: center;
   justify-content: space-between;
   font-size: 0.95rem;
-  margin-bottom: 8px;
   user-select: none;
   padding: 15px;
 }
@@ -65,7 +65,7 @@ button img {
 .drop .options {
   background-color: var(--White);
   cursor: pointer;
-  box-shadow: 0 0 5px #1c1c1c39;
+  box-shadow: var(--BoxShadow);
   border-radius: 5px;
 }
 
@@ -93,9 +93,9 @@ body.dark-mode .drop .options {
   font-weight: 700;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 680px) {
   .filter-container {
-    gap: 45px;
+    gap: 35px;
   }
 
   .search-box {

@@ -22,9 +22,9 @@ const createElement = (name, population, region, capital, flag) => {
   countries_container.innerHTML += el;
 };
 
-const getAllCountries = (urlData) => {
+const getAllCountries = (url) => {
   loading_container.style.display = "flex";
-  fetch(urlData).then((res) => {
+  fetch(url).then((res) => {
     res.json().then((data) => {
       for (const key in data) {
         const country = data[key];

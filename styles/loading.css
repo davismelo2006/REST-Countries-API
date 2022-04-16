@@ -17,7 +17,6 @@
 }
 .loading-container div:nth-child(2) {
   background-color: #f5f532;
-
   animation-delay: 0.2s;
 }
 .loading-container div:nth-child(3) {
