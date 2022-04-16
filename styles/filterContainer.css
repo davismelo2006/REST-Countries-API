@@ -1,7 +1,7 @@
 .filter-container {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .search-box {
@@ -50,7 +50,6 @@ button img {
 .drop .title {
   display: flex;
   width: 200px;
-  align-items: center;
   justify-content: space-between;
   font-size: 0.95rem;
   user-select: none;
@@ -59,6 +58,10 @@ button img {
 
 .drop .title img {
   width: 12px;
+}
+
+body.dark-mode .drop .title img {
+  filter: invert(1);
 }
 
 .drop .title,
@@ -77,6 +80,7 @@ body.dark-mode .drop .options {
 .drop .options {
   position: absolute;
   width: 100%;
+  margin-top: 5px;
   padding: 5px 15px;
 }
 
@@ -94,11 +98,10 @@ body.dark-mode .drop .options {
 }
 
 @media (max-width: 680px) {
-  .filter-container {
-    gap: 35px;
-  }
-
   .search-box {
     width: 100%;
+  }
+  .filter-container {
+    gap: 35px;
   }
 }

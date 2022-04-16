@@ -14,8 +14,6 @@ body.dark-mode header {
 
 header .wrapper {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .toggle-theme {
@@ -25,6 +23,7 @@ header .wrapper {
   width: 100%;
   gap: 10px;
   justify-content: end;
+  font-weight: 700;
 }
 
 .toggle-theme img {
@@ -33,10 +32,6 @@ header .wrapper {
 
 body.dark-mode .toggle-theme img {
   filter: invert(1);
-}
-
-.toggle-theme span {
-  font-weight: 700;
 }
 
 @media (max-width: 600px) {

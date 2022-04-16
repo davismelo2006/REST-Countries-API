@@ -8,7 +8,6 @@
 .country-container {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  width: 250px;
   border-radius: 5px;
   cursor: pointer;
   box-shadow: var(--BoxShadow);
@@ -19,8 +18,6 @@ body.dark-mode .country-container {
 }
 
 .country-flag {
-  height: 100%;
-  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
