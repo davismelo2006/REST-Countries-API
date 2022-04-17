@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="./styles/filterContainer.css" />
     <link rel="stylesheet" href="./styles/countryContainer.css" />
     <link rel="stylesheet" href="./styles/modal.css" />
-    <link rel="stylesheet" href="./styles/loading.css" />
+
+    <script src="./scripts/app.js" defer></script>
+    <script src="./scripts/toggleTheme.js" defer></script>
+    <script src="./scripts/optionsFilter.js" defer></script>
   </head>
   <body>
     <header>
@@ -23,80 +26,44 @@
         </div>
       </div>
     </header>
-    <main>
-      <div class="wrapper hidden">
-        <section class="filter-container">
-          <div class="search-box">
-            <button>
-              <img src="./img/search-icon.svg" alt="search-icon" />
-            </button>
-            <input
-              type="text"
-              name="search-ipt"
-              placeholder="Search for a country..."
-              id="search-ipt"
-            />
+    <main class="wrapper">
+      <section class="filter-container">
+        <div class="search-box">
+          <button>
+            <img src="./img/search-icon.svg" alt="search-icon" />
+          </button>
+          <input
+            type="text"
+            name="search-ipt"
+            placeholder="Search for a country..."
+            id="search-ipt"
+          />
+        </div>
+        <div class="drop">
+          <div class="title">
+            <span> Filter by Region </span>
+            <img src="./img/arrow-down.svg" alt="arrow-down" />
           </div>
-          <div class="drop">
-            <div class="title">
-              <span> Filter by Region </span>
-              <img src="./img/arrow-down.svg" alt="arrow-down" />
-            </div>
-            <div class="options hidden">
-              <div>Africa</div>
-              <div>Americas</div>
-              <div>Asia</div>
-              <div>Europe</div>
-              <div>Oceania</div>
-            </div>
-          </div>
-        </section>
-        <section class="countries-container"></section>
-      </div>
-      <div class="wrapper country-modal">
-        <button>
-          <img src="./img/arrow-left.svg" alt="arrow-left" /> Back
-        </button>
-        <div class="country-modal-container">
-          <div class="left-side">
-            <img src="./img/globe.png" alt="" />
-          </div>
-          <div class="right-side">
-            <h2>Brazil</h2>
-            <div class="country-modal-desc">
-              <div>
-                <p>Native Name: Brazil</p>
-                <p>Population</p>
-                <p>Region</p>
-                <p>Sub Region</p>
-                <p>Capital</p>
-              </div>
-              <div>
-                <p>Top Level Domain</p>
-                <p>Currencies</p>
-                <p>Languages</p>
-              </div>
-            </div>
-            <div class="border-countries">
-              <p>Border Countries:</p>
-              <div class="border-countries-list">
-                <span>France</span>
-                <span>England</span>
-              </div>
-            </div>
+          <div class="options hidden">
+            <div>Africa</div>
+            <div>Americas</div>
+            <div>Asia</div>
+            <div>Europe</div>
+            <div>Oceania</div>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="countries-container"></section>
     </main>
-    <div class="loading-container hidden">
+    <div class="wrapper country-modal hidden">
+      <button><img src="./img/arrow-left.svg" alt="arrow-left" /> Back</button>
+    </div>
+    <div class="loading-container">
       <div></div>
       <div></div>
       <div></div>
       <div></div>
       <div></div>
     </div>
-    <script src="./scripts/app.js"></script>
-    <script src="./scripts/toggleTheme.js"></script>
-    <script src="./scripts/optionsFilter.js"></script>
   </body>
 </html>

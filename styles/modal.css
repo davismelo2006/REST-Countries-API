@@ -22,7 +22,8 @@ body.dark-mode .wrapper.country-modal button img {
 .country-modal-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
+  margin: 40px auto;
+  gap: 50px;
 }
 
 .country-modal-container > .left-side,
@@ -33,6 +34,7 @@ body.dark-mode .wrapper.country-modal button img {
 /* left-side */
 .country-modal-container > .left-side img {
   height: 100%;
+  width: 100%;
 }
 
 /* right-side */
@@ -58,4 +60,15 @@ body.dark-mode .wrapper.country-modal button img {
 .border-countries-list > span {
   margin-left: 10px;
   padding: 4px 18px;
+}
+
+@media (max-width: 1000px) {
+  .country-modal-container {
+    width: 90%;
+    gap: 25px;
+  }
+  .country-modal-container,
+  .country-modal-desc {
+    flex-direction: column;
+  }
 }
