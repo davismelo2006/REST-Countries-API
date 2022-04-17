@@ -84,10 +84,6 @@ body.dark-mode .drop .options {
   padding: 5px 15px;
 }
 
-.drop .options.hidden {
-  display: none;
-}
-
 .drop .options div {
   margin: 8px 0;
 }

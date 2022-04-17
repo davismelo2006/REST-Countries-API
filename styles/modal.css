@@ -1,0 +1,61 @@
+.wrapper.country-modal button {
+  padding: 8px 25px;
+}
+
+.wrapper.country-modal button,
+.border-countries-list > span {
+  gap: 8px;
+  border-radius: 5px;
+  box-shadow: var(--BoxShadow);
+}
+
+body.dark-mode .wrapper.country-modal button,
+body.dark-mode .border-countries-list > span {
+  background-color: var(--DarkBlue);
+  color: var(--White);
+}
+
+body.dark-mode .wrapper.country-modal button img {
+  filter: invert(1);
+}
+
+.country-modal-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.country-modal-container > .left-side,
+.country-modal-container > .right-side {
+  width: 100%;
+}
+
+/* left-side */
+.country-modal-container > .left-side img {
+  height: 100%;
+}
+
+/* right-side */
+
+.country-modal-container > .right-side {
+  padding: 25px 0;
+}
+
+.country-modal-desc {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 0 10%;
+}
+
+.country-modal-desc p {
+  margin-top: 5px;
+}
+
+.border-countries {
+  display: flex;
+}
+
+.border-countries-list > span {
+  margin-left: 10px;
+  padding: 4px 18px;
+}

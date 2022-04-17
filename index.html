@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/filterContainer.css" />
     <link rel="stylesheet" href="./styles/countryContainer.css" />
+    <link rel="stylesheet" href="./styles/modal.css" />
     <link rel="stylesheet" href="./styles/loading.css" />
   </head>
   <body>
@@ -23,7 +24,7 @@
       </div>
     </header>
     <main>
-      <div class="wrapper">
+      <div class="wrapper hidden">
         <section class="filter-container">
           <div class="search-box">
             <button>
@@ -52,9 +53,42 @@
         </section>
         <section class="countries-container"></section>
       </div>
-      <div class="wrapper country-page"></div>
+      <div class="wrapper country-modal">
+        <button>
+          <img src="./img/arrow-left.svg" alt="arrow-left" /> Back
+        </button>
+        <div class="country-modal-container">
+          <div class="left-side">
+            <img src="./img/globe.png" alt="" />
+          </div>
+          <div class="right-side">
+            <h2>Brazil</h2>
+            <div class="country-modal-desc">
+              <div>
+                <p>Native Name: Brazil</p>
+                <p>Population</p>
+                <p>Region</p>
+                <p>Sub Region</p>
+                <p>Capital</p>
+              </div>
+              <div>
+                <p>Top Level Domain</p>
+                <p>Currencies</p>
+                <p>Languages</p>
+              </div>
+            </div>
+            <div class="border-countries">
+              <p>Border Countries:</p>
+              <div class="border-countries-list">
+                <span>France</span>
+                <span>England</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    <div class="loading-container">
+    <div class="loading-container hidden">
       <div></div>
       <div></div>
       <div></div>

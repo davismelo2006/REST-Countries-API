@@ -3,7 +3,6 @@
   justify-content: center;
   gap: 8px;
 }
-
 .loading-container div {
   border-radius: 5px;
   width: 30px;
@@ -11,7 +10,6 @@
   transition: all 0.25s;
   animation: loading-anim 1s infinite alternate;
 }
-
 .loading-container div:nth-child(1) {
   background-color: #24a324;
 }
@@ -31,7 +29,6 @@
   background-color: #601396;
   animation-delay: 0.8s;
 }
-
 @keyframes loading-anim {
   from {
     transform: translateY(0);
