@@ -7,10 +7,15 @@
 
 .country-container {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 50% 50%;
   border-radius: 5px;
   cursor: pointer;
   box-shadow: var(--BoxShadow);
+  transition: 0.35s ease;
+}
+
+.country-container:hover {
+  transform: translateY(-10px);
 }
 
 body.dark-mode .country-container {
@@ -19,6 +24,7 @@ body.dark-mode .country-container {
 
 .country-container img {
   border-radius: 5px 5px 0 0;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
