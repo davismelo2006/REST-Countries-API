@@ -23,7 +23,7 @@ const createCard = (el) => {
       ${el.population.toLocaleString()}</p>
   <p><strong>Region:</strong>
       ${el.region}</p>
-  <p><strong>Capital:${el.capital}</strong> 
+  <p><strong>Capital: </strong> 
   ${el.capital !== undefined ? el.capital[0] : ""}</p>
 </div>`;
   countries_container.appendChild(country);
@@ -35,7 +35,8 @@ const createModal = (el) => {
 
   const getValues = (data) => {
     let res = Object.values(data)[0];
-    if (typeof res === "object") return (res = Object.values(res).join(" ,"));
+    if (typeof res === "object") return (res = Object.values(res).join(", "));
+    return res;
   };
 
   const getBorders = () => {
@@ -53,22 +54,30 @@ const createModal = (el) => {
   <h2>${el.name.common}</h2>
   <div class="country-modal-desc">
     <div>
-      <p>Native Name: ${getValues(Object.values(el.name.nativeName))}</p>
+      <p>Native Name: ${
+        el.name.nativeName !== undefined
+          ? getValues(Object.values(el.name.nativeName))
+          : ""
+      }</p>
       <p>Population: ${el.population.toLocaleString()}</p>
       <p>Region: ${el.region}</p>
       <p>Sub Region: ${el.subregion}</p>
-      <p>Capital: ${el.capital[0]}</p>
+      <p>Capital: ${el.capital !== undefined ? el.capital[0] : ""}</p>
     </div>
     <div>
       <p>Top Level Domain: ${el.tld[0]}</p>
-      <p>Currencies: ${getValues(el.currencies)}</p>
-      <p>Languages: ${getValues(el.languages)}</p>
+      <p>Currencies: ${
+        el.languages !== undefined ? getValues(el.currencies) : ""
+      }</p>
+      <p>Languages: ${
+        el.languages !== undefined ? getValues(el.languages) : ""
+      }</p>
     </div>
   </div>
   <div class="border-countries">
     <p>Border Countries: </p>
     <div class="border-countries-list">
-    ${getBorders()}
+    ${el.borders !== undefined ? getBorders() : ""}
     </div>
   </div>
 </div>`;
